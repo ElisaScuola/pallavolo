@@ -1,0 +1,39 @@
+public class Giocatore{
+
+    private String nome;
+    private String cognome;
+    private String sesso;
+
+    public Giocatore(String nome, String cognome, String sesso){
+        this.nome = nome;
+        this.cognome = cognome;
+        this.sesso = sesso;
+    }
+
+    public String getNome(){
+        return nome;
+    }
+
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public String getCognome(){
+        return cognome;
+    }
+
+    public void setCognome(String cognome){
+        this.cognome = cognome;
+    }
+
+    public String getSesso(){
+        return sesso;
+    }
+
+    public void setSesso(String sesso){
+        if (!sesso.equals("M") && !sesso.equals("F")){
+            throw new IllegalArgumentException("Il sesso deve essere M o F");
+        }
+        this.sesso = sesso;
+    }
+}
